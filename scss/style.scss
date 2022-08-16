@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// .calc {
+//   width: 300px;
+//   height: 400px;
+//   display: grid;
+//   grid-template-areas:
+//     'title-bar title-bar title-bar title-bar'
+//     'result result result result'
+//     'ac sign per div'
+//     'num7 num8 num9 mult'
+//     'num4 num5 num6 sub'
+//     'num1 num2 num3 add'
+//     'num0 num0 com eq'
+//   ;
+//   border: 1px solid #000;
+// }
+
+// .title-bar {
+//   grid-area: title-bar;
+// }
+
+// .result {
+//   grid-area: result;
+//   display: flex;
+//   justify-self: end;
+// }
+
+// .ac {
+//   grid-area: ac;
+// }
+
+// .sign {
+  
+// }
+
+
+.calc {
+  width: 200px;
+  height: 340px;
+  display: grid;
+  grid-template: 20px 60px repeat(5, 50px) / repeat(4, 50px);
+  border: 1px solid #000;
+}
+
+.title-bar {
+  grid-column: 1 / -1;
+}
+
+.result {
+  display: flex;
+  justify-self: end;
+  grid-column: span 4;
+}
+
+
+.num0 {
+  grid-column: span 2;
+}
+
+.calc div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
